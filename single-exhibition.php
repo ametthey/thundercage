@@ -7,7 +7,7 @@
 get_header(); ?>
 	<span id="previous">previous exhibitions</span>
 	
-	<div class="site">
+	<div class="site transition-fade" id="swup">
 		<p><?php echo get_field('project_exhibition_title'); ?></p>
 
 		<div class="project__gallery">

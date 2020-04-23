@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div class="site">
+	<div id="swup" class="site transition-fade">
 
 		<p>Thundercage is a cycle of exhibitions in Aubervilliers in the 
 		Paris region. Located outside, this “artist-run Nospace” 

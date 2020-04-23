@@ -6,13 +6,12 @@
 
 get_header(); ?>
 	<span id="previous">previous exhibitions</span>
-	
 	<div class="site transition-fade" id="swup">
 		<p><?php echo get_field('project_exhibition_title'); ?></p>
 
 		<div class="project__gallery">
 
-			<?php 
+			<?php
 				$images = get_field('project_exhibition_gallery');
 				$size	= 'gallery';
 
@@ -33,7 +32,7 @@ get_header(); ?>
 		<span id="close">close</span>
 
 		<div class="exhibitions__list">
-			<?php 
+			<?php
 				/*
 				 * wp query for the custom post type : exhibition
 				 *
@@ -42,18 +41,13 @@ get_header(); ?>
 				 *
 				 */
 			$exhibition = new WP_Query(array('post_type'=>'exhibition', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
-			 
 			<?php if ( $exhibition->have_posts() ) : ?>
-			 
-			 
 				<?php while ( $exhibition->have_posts() ) : $exhibition->the_post(); ?>
 
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
 				<?php endwhile; ?>
-			 
 				<?php wp_reset_postdata(); ?>
-			 
 			<?php else : ?>
 				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 			<?php endif; ?>

@@ -8,7 +8,7 @@ get_header(); ?>
 
 	<div id="swup" class="site transition-fade">
 
-		<p>Thundercage is a cycle of exhibitions in Aubervilliers in the 
+		<p class="description">Thundercage is a cycle of exhibitions in Aubervilliers in the 
 		Paris region. Located outside, this “artist-run Nospace” 
 		proposes duet exhibitions in the form of duels show.</p>
 

@@ -26,6 +26,12 @@ get_header(); ?>
 			<?php endif; ?>
 
 		</div>
+
+        <div class="container__project__video">
+            <div class="project__video">
+                <?php the_field( 'video_of_the_exhibition' ); ?>
+            </div>
+        </div>
 	</div>
 
 	<div class="exhibitions">
@@ -35,11 +41,7 @@ get_header(); ?>
 			<?php
 				/*
 				 * wp query for the custom post type : exhibition
-				 *
-				 * https://www.wpbeginner.com/wp-tutorials/how-to-display-all-your-wordpress-posts-on-one-page/
-				 *
-				 *
-				 */
+				 * https://www.wpbeginner.com/wp-tutorials/how-to-display-all-your-wordpress-posts-on-one-page/ */
 			$exhibition = new WP_Query(array('post_type'=>'exhibition', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 			<?php if ( $exhibition->have_posts() ) : ?>
 				<?php while ( $exhibition->have_posts() ) : $exhibition->the_post(); ?>
